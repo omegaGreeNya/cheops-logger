@@ -41,6 +41,8 @@ library metrics-noop
   visibility: private
   exposed-modules:
      Cheops.Logger.Internal.Metric.Noop
+  reexported-modules:
+     Cheops.Logger.Internal.Metric.Noop as Cheops.Logger.Metrics
   hs-source-dirs: src
   default-language: Haskell2010
   build-depends:
@@ -63,7 +65,7 @@ library
     , co-log-core
     , co-log-json ^>=0.0
     , co-log-concurrent ^>=0.5
-    , metrics-prometheus
+    , metrics-noop
     , stm ^>=2.5
   ghc-options: -Wall -Werror
 
